@@ -1,0 +1,19 @@
+<suite name="CrossBrowserTesting">
+
+<test threadcount="3" name="ChromeTest">
+<parameter name="browser" value="Chrome"></parameter>
+	<classes>			
+<!-- <class name="testcases.ManageNewsTest"></class>
+<class name="testcases.SubCategoryTest"></class> -->
+ <class name="testcases.ManageCategoryTest"></class>
+    </classes>
+	</test>
+	<test threadcount="3" name="EdgeTest">
+<parameter name="browser" value="Edge"></parameter>
+	<classes>			
+<!-- <class name="testcases.ManageNewsTest"></class>
+<class name="testcases.SubCategoryTest"></class> -->
+ <class name="testcases.ManageCategoryTest"></class>
+    </classes>
+	</test>
+</suite>
