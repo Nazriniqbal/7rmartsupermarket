@@ -36,79 +36,94 @@ public class CategoryPage {
 	@FindBy(xpath="//h4[text()='Search List Categories']") WebElement addSearchCategoryPage;
 	@FindBy(xpath="//input[@name='un']") WebElement searchCategoryField;
 	@FindBy(xpath="//button[@name='Search']") WebElement searchSubmitButton;
+	@FindBy(xpath="//center[text()='.........RESULT NOT FOUND.......']") WebElement resultNotFoundMessage;
+	
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']") WebElement resetButton;
+	@FindBy(xpath="//h4[text()='List Categories']") WebElement tableTitle;
 	
 	
-	
-	public void clickOnCategoryButton()
-	{
-		categoryButton.click();
-	}
 	
 	public String getCategoryPageText()
 	{
 		return categorypagetext.getText();	
 	}
-	public void clickOnNewCategoryButton()
+	public CategoryPage clickOnNewCategoryButton()
 	{
 		newCategoryButton.click();
+		return this;
 	}
 	public boolean isAddCategoryPageLoaded()
 	{
 		return addCategoryPage.isDisplayed();
 	}
-	public void enterOnCategoryField()
+	public CategoryPage enterOnCategoryField()
 	{
-		categoryfield.sendKeys("iphone66");
+		categoryfield.sendKeys("iphone66"+gu.generateCurrentDateAndTime());
+		return this;
 	}
-	public void selectGroupsOnCategoryList()
+	public CategoryPage selectGroupsOnCategoryList()
 	{
 		selectGroupsCategoryList.click();
-		
+		return this;
 	}
 	
-	public void clickOnChoosefile()
+	public CategoryPage clickOnChoosefile()
 	{
 		choosefile.sendKeys("C:\\Users\\DELL\\Pictures\\Screenshots\\Screenshot 2025-01-06 211752.png");
+		return this;
 	}
 	
-	public void clickOnRadioButton1()
+	public CategoryPage clickOnRadioButton1()
 	{
 		gu.selectRadioButton(radioButton1);
+		return this;
 		
 	}
-	public void clickOnRadioButton2()
+	public CategoryPage clickOnRadioButton2()
 	{
 		gu.selectRadioButton(radioButton2);
+		return this;
+		
 		
 	}
-	public void clickOnSaveButton()
+	public CategoryPage clickOnSaveButton()
 	{
 		saveButton.click();
+		return this;
 		
 	}
-	public String getAlertMessage()
+	public boolean getAlertMessage()
 	{
-		return alertMessage.getText();
+		return alertMessage.isDisplayed();
 	}
-	public void clickOnSearchButton()
+	public CategoryPage clickOnSearchButton()
 	{
 		searchButton.click();
+		return this;
 	}
-	public void enterOnSearchCategoryField()
+	public CategoryPage enterOnSearchCategoryField()
 	{
-		searchCategoryField.sendKeys("iphone");
+		searchCategoryField.sendKeys("Lotus");
+		return this;
 	}
-	public void clickOnSearchsubmitButton()
+	public CategoryPage clickOnSearchsubmitButton()
 	{
 		searchSubmitButton.click();
-		
+		return this;
 	}
-	public void clickOnResetButton()
+	public boolean checkOnResultMessage()
+	{
+		return resultNotFoundMessage.isDisplayed();
+	}
+	public CategoryPage clickOnResetButton()
 	{
 		
 		resetButton.click();
+		return this;
+	}
+public boolean checkOnTableTitleIsDisplayed() {
 		
+		return tableTitle.isDisplayed();
 	}
 	
 }

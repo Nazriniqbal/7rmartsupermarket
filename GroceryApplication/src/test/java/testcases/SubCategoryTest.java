@@ -5,67 +5,52 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.SubCategoryPage;
 
 public class SubCategoryTest extends BaseClass{
+	LoginPage lp;
+	HomePage hp;
+	SubCategoryPage scp;
   @Test
-  public void addSubCategory() throws IOException {
-	  LoginPage login = new LoginPage(driver);
-	  login.loginByUsingExcelData();
-	  
-	  HomePage home=new HomePage(driver);
-	  home.getHomePageText();
-	  home.clickOnSubCategoryButton();
-	  
-	  SubCategoryPage sub=new SubCategoryPage(driver);
-	 // sub.clickOnSubCategoryButton();
-	  sub.clickOnNewSubCategoryButton();
-	  sub.clickOnSelectCategoryOption();
-	  sub.enterSubCategoryField();
-	  sub.clickOnChoosefile();
-	  sub.clickOnSaveButton();
-	 boolean actualResult = sub.getAlertMessage().contains("Sub Category Created Successfully");
+  public void verifyAddSubCategory() throws IOException {
+	  lp = new LoginPage(driver);
+	  hp=lp.loginByUsingExcelData();
+	  hp=new HomePage(driver);
+	  scp= hp.clickOnSubCategoryButton().clickOnNewSubCategoryButton().clickOnSelectCategoryOption().enterSubCategoryField()
+			 .clickOnChoosefile().clickOnSaveButton();
+	 boolean actualResult = scp.getAlertMessage();
 	 boolean expectedResult = true;
-	 Assert.assertEquals(actualResult,expectedResult,"Alert message is not as expected");  
+	 Assert.assertEquals(actualResult,expectedResult,Constants.SCP_verifyAddSubCategory);  
   }
-  @Test(enabled = false)
-  public void searchSubCategory() throws IOException
+  @Test
+  public void verifySearchSubCategory() throws IOException
   {
-	  LoginPage login = new LoginPage(driver);
-	  login.loginByUsingExcelData();
-	  
-	  HomePage home=new HomePage(driver);
-	  home.getHomePageText();
-	  home.clickOnSubCategoryButton();
-	  
-	  SubCategoryPage sub=new SubCategoryPage(driver);
-	  //sub.clickOnSubCategoryButton();
-	  sub.clickOnSearchButton();
-	  sub.clickOnSelectSearchCategoryOption();
-	  sub.enterSearchSubCategoryField();
-	  sub.clickOnSearchOptionButton();
-	  
+	  lp = new LoginPage(driver);
+	  hp=lp.loginByUsingExcelData();
+	  hp=new HomePage(driver);
+	  scp= hp.clickOnSubCategoryButton().clickOnSearchButton().clickOnSelectSearchCategoryOption().enterSearchSubCategoryField()
+			  .clickOnSearchOptionButton();
 	  boolean expectedResult = true;
-	  boolean actualResult = sub.getSubCategoryPageText().contains("");
+	  boolean actualResult = scp.checkOnResult();
+	  Assert.assertEquals(expectedResult, actualResult,Constants.SCP_verifySearchSubCategory);
 	  
 	  
 	  
 	  
   }
-  @Test(enabled = false)
-  public void resetSubCategory() throws IOException
+  @Test
+  public void verifyResetSubCategory() throws IOException
   {
-	  LoginPage login = new LoginPage(driver);
-	  login.loginByUsingExcelData();
+	  lp = new LoginPage(driver);
+	  hp=lp.loginByUsingExcelData();
+	  hp=new HomePage(driver);
+	  scp= hp.clickOnSubCategoryButton().clickOnResetButton();
+	  boolean expectedResult = true;
+	  boolean actualResult = scp.checkOnTableTitleIsDisplayed();
+	  Assert.assertEquals(expectedResult, actualResult,Constants.SCP_verifyResetSubCategory);
 	  
-	  HomePage home=new HomePage(driver);
-	  home.getHomePageText();
-	  home.clickOnSubCategoryButton();
-	  
-	  SubCategoryPage sub=new SubCategoryPage(driver);
-	 // sub.clickOnSubCategoryButton();
-      sub.clickOnResetButton();
 }
 }

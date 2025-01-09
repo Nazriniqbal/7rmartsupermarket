@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="3" ignored="3" total="7" passed="0" failed="1" skipped="0">
+<testng-results retried="3" ignored="3" total="9" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-09T17:35:58 IST" name="Mytestsuite" finished-at="2025-01-09T17:36:14 IST" duration-ms="16434">
+  <suite started-at="2025-01-09T22:28:53 IST" name="Mytestsuite" finished-at="2025-01-09T22:29:21 IST" duration-ms="28632">
     <groups>
-      <group name="smoke">
-        <method signature="ManageCategoryTest.verifyAddManageCategory()[pri:0, instance:testcases.ManageCategoryTest@58e1d9d]" name="verifyAddManageCategory" class="testcases.ManageCategoryTest"/>
-      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-01-09T17:35:58 IST" name="myTest" finished-at="2025-01-09T17:36:14 IST" duration-ms="16434">
-      <class name="testcases.ManageCategoryTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testcases.ManageCategoryTest@58e1d9d]" started-at="2025-01-09T17:35:58 IST" name="initializeBrowser" finished-at="2025-01-09T17:36:00 IST" duration-ms="2082" status="PASS">
+    <test started-at="2025-01-09T22:28:53 IST" name="myTest" finished-at="2025-01-09T22:29:21 IST" duration-ms="28632">
+      <class name="testcases.CategoryTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:28:53 IST" name="initializeBrowser" finished-at="2025-01-09T22:28:55 IST" duration-ms="2427" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,16 +18,16 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method retried="true" signature="verifyAddManageCategory()[pri:0, instance:testcases.ManageCategoryTest@58e1d9d]" started-at="2025-01-09T17:36:00 IST" name="verifyAddManageCategory" finished-at="2025-01-09T17:36:02 IST" duration-ms="2708" status="SKIP">
+        <test-method retried="true" signature="addCategory()[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:28:55 IST" name="addCategory" finished-at="2025-01-09T22:28:58 IST" duration-ms="2688" status="SKIP">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "js" is null]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "js" is null
-at utilities.GeneralUtility.clickUsingJavaScriptMethod(GeneralUtility.java:117)
-at pages.ManageCategoryPage.selectGroupsOnCategoryList(ManageCategoryPage.java:63)
-at testcases.ManageCategoryTest.verifyAddManageCategory(ManageCategoryTest.java:24)
+at utilities.GeneralUtility.scroll(GeneralUtility.java:122)
+at pages.CategoryPage.clickOnChoosefile(CategoryPage.java:72)
+at testcases.CategoryTest.addCategory(CategoryTest.java:24)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -64,19 +61,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddManageCategory -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testcases.ManageCategoryTest@58e1d9d]" started-at="2025-01-09T17:36:02 IST" name="driverQuit" finished-at="2025-01-09T17:36:02 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- addCategory -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:28:58 IST" name="driverQuit" finished-at="2025-01-09T22:28:58 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAddManageCategory status=SKIP method=ManageCategoryTest.verifyAddManageCategory()[pri:0, instance:testcases.ManageCategoryTest@58e1d9d] output={null}]]]>
+                <![CDATA[[TestResult name=addCategory status=SKIP method=CategoryTest.addCategory()[pri:0, instance:testcases.CategoryTest@4f0f2942] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testcases.ManageCategoryTest@58e1d9d]" started-at="2025-01-09T17:36:02 IST" name="initializeBrowser" finished-at="2025-01-09T17:36:04 IST" duration-ms="1661" status="PASS">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:28:58 IST" name="initializeBrowser" finished-at="2025-01-09T22:29:00 IST" duration-ms="1723" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -87,16 +84,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method retried="true" signature="verifyAddManageCategory()[pri:0, instance:testcases.ManageCategoryTest@58e1d9d]" started-at="2025-01-09T17:36:04 IST" name="verifyAddManageCategory" finished-at="2025-01-09T17:36:06 IST" duration-ms="2051" status="SKIP">
+        <test-method retried="true" signature="addCategory()[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:29:00 IST" name="addCategory" finished-at="2025-01-09T22:29:02 IST" duration-ms="2022" status="SKIP">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "js" is null]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "js" is null
-at utilities.GeneralUtility.clickUsingJavaScriptMethod(GeneralUtility.java:117)
-at pages.ManageCategoryPage.selectGroupsOnCategoryList(ManageCategoryPage.java:63)
-at testcases.ManageCategoryTest.verifyAddManageCategory(ManageCategoryTest.java:24)
+at utilities.GeneralUtility.scroll(GeneralUtility.java:122)
+at pages.CategoryPage.clickOnChoosefile(CategoryPage.java:72)
+at testcases.CategoryTest.addCategory(CategoryTest.java:24)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -130,19 +127,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddManageCategory -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testcases.ManageCategoryTest@58e1d9d]" started-at="2025-01-09T17:36:06 IST" name="driverQuit" finished-at="2025-01-09T17:36:06 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyAddManageCategory status=SKIP method=ManageCategoryTest.verifyAddManageCategory()[pri:0, instance:testcases.ManageCategoryTest@58e1d9d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testcases.ManageCategoryTest@58e1d9d]" started-at="2025-01-09T17:36:06 IST" name="initializeBrowser" finished-at="2025-01-09T17:36:08 IST" duration-ms="1605" status="PASS">
+        </test-method> <!-- addCategory -->
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:29:02 IST" name="initializeBrowser" finished-at="2025-01-09T22:29:03 IST" duration-ms="1692" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -153,16 +139,27 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method retried="true" signature="verifyAddManageCategory()[pri:0, instance:testcases.ManageCategoryTest@58e1d9d]" started-at="2025-01-09T17:36:08 IST" name="verifyAddManageCategory" finished-at="2025-01-09T17:36:10 IST" duration-ms="1885" status="SKIP">
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:29:02 IST" name="driverQuit" finished-at="2025-01-09T22:29:02 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addCategory status=SKIP method=CategoryTest.addCategory()[pri:0, instance:testcases.CategoryTest@4f0f2942] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method retried="true" signature="addCategory()[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:29:03 IST" name="addCategory" finished-at="2025-01-09T22:29:07 IST" duration-ms="3675" status="SKIP">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "js" is null]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "js" is null
-at utilities.GeneralUtility.clickUsingJavaScriptMethod(GeneralUtility.java:117)
-at pages.ManageCategoryPage.selectGroupsOnCategoryList(ManageCategoryPage.java:63)
-at testcases.ManageCategoryTest.verifyAddManageCategory(ManageCategoryTest.java:24)
+at utilities.GeneralUtility.scroll(GeneralUtility.java:122)
+at pages.CategoryPage.clickOnChoosefile(CategoryPage.java:72)
+at testcases.CategoryTest.addCategory(CategoryTest.java:24)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -196,19 +193,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddManageCategory -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testcases.ManageCategoryTest@58e1d9d]" started-at="2025-01-09T17:36:10 IST" name="driverQuit" finished-at="2025-01-09T17:36:10 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- addCategory -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:29:07 IST" name="driverQuit" finished-at="2025-01-09T22:29:07 IST" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAddManageCategory status=SKIP method=ManageCategoryTest.verifyAddManageCategory()[pri:0, instance:testcases.ManageCategoryTest@58e1d9d] output={null}]]]>
+                <![CDATA[[TestResult name=addCategory status=SKIP method=CategoryTest.addCategory()[pri:0, instance:testcases.CategoryTest@4f0f2942] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testcases.ManageCategoryTest@58e1d9d]" started-at="2025-01-09T17:36:10 IST" name="initializeBrowser" finished-at="2025-01-09T17:36:12 IST" duration-ms="2687" status="PASS">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:29:07 IST" name="initializeBrowser" finished-at="2025-01-09T22:29:09 IST" duration-ms="2017" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -219,50 +216,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyAddManageCategory()[pri:0, instance:testcases.ManageCategoryTest@58e1d9d]" started-at="2025-01-09T17:36:12 IST" name="verifyAddManageCategory" finished-at="2025-01-09T17:36:14 IST" duration-ms="1601" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+        <test-method signature="addCategory()[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:29:09 IST" name="addCategory" finished-at="2025-01-09T22:29:12 IST" duration-ms="2651" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=131.0.6778.205)
-Build info: version: '4.26.0', revision: '8ccf0219d7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ba1fa34e24590e18b9b1b3126a454f55, findElement {value=//input[@id='category'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49948}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49948/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ba1fa34e24590e18b9b1b3126a454f55]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "js" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=131.0.6778.205)
-Build info: version: '4.26.0', revision: '8ccf0219d7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ba1fa34e24590e18b9b1b3126a454f55, findElement {value=//input[@id='category'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49948}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49948/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ba1fa34e24590e18b9b1b3126a454f55
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
-at pages.ManageCategoryPage.enterOnCategoryField(ManageCategoryPage.java:57)
-at testcases.ManageCategoryTest.verifyAddManageCategory(ManageCategoryTest.java:23)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "js" is null
+at utilities.GeneralUtility.scroll(GeneralUtility.java:122)
+at pages.CategoryPage.clickOnChoosefile(CategoryPage.java:72)
+at testcases.CategoryTest.addCategory(CategoryTest.java:24)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -293,97 +256,74 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddManageCategory -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testcases.ManageCategoryTest@58e1d9d]" started-at="2025-01-09T17:36:14 IST" name="driverQuit" finished-at="2025-01-09T17:36:14 IST" duration-ms="12" status="FAIL">
+        </test-method> <!-- addCategory -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:29:12 IST" name="driverQuit" finished-at="2025-01-09T22:29:12 IST" duration-ms="184" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAddManageCategory status=FAILURE method=ManageCategoryTest.verifyAddManageCategory()[pri:0, instance:testcases.ManageCategoryTest@58e1d9d] output={null}]]]>
+                <![CDATA[[TestResult name=addCategory status=FAILURE method=CategoryTest.addCategory()[pri:0, instance:testcases.CategoryTest@4f0f2942] output={null}]]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=131.0.6778.205)
-Build info: version: '4.26.0', revision: '8ccf0219d7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ba1fa34e24590e18b9b1b3126a454f55, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49948}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49948/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ba1fa34e24590e18b9b1b3126a454f55]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=131.0.6778.205)
-Build info: version: '4.26.0', revision: '8ccf0219d7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ba1fa34e24590e18b9b1b3126a454f55, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49948}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49948/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ba1fa34e24590e18b9b1b3126a454f55
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:334)
-at utilities.ScreenshotUtility.getScreenshot(ScreenshotUtility.java:19)
-at testcases.BaseClass.driverQuit(BaseClass.java:63)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:802)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:778)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testcases.ManageCategoryTest -->
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:29:12 IST" name="initializeBrowser" finished-at="2025-01-09T22:29:14 IST" duration-ms="1936" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="resetCategory()[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:29:14 IST" name="resetCategory" finished-at="2025-01-09T22:29:16 IST" duration-ms="2532" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetCategory -->
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:29:16 IST" name="initializeBrowser" finished-at="2025-01-09T22:29:19 IST" duration-ms="2483" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:29:16 IST" name="driverQuit" finished-at="2025-01-09T22:29:16 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=resetCategory status=SUCCESS method=CategoryTest.resetCategory()[pri:0, instance:testcases.CategoryTest@4f0f2942] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method signature="searchCategory()[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:29:19 IST" name="searchCategory" finished-at="2025-01-09T22:29:21 IST" duration-ms="2481" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchCategory -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testcases.CategoryTest@4f0f2942]" started-at="2025-01-09T22:29:21 IST" name="driverQuit" finished-at="2025-01-09T22:29:21 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchCategory status=SUCCESS method=CategoryTest.searchCategory()[pri:0, instance:testcases.CategoryTest@4f0f2942] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+      </class> <!-- testcases.CategoryTest -->
     </test> <!-- myTest -->
   </suite> <!-- Mytestsuite -->
 </testng-results>

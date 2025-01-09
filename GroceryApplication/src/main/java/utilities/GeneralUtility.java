@@ -119,8 +119,8 @@ public class GeneralUtility {
 	}
 	public void scroll() {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		//js.executeScript("window.scrollBy(0,1000)","");
-		js.executeScript("window.scrollBy(0,350)", "");
+		js.executeScript("window.scrollBy(0,1000)","");
+		
 	}
 	public void scrollbottompage() {
 		
@@ -147,6 +147,8 @@ public class GeneralUtility {
             return false;
         }
 	}
+	
+	
 
 	public String generateCurrentDateAndTime() {
 

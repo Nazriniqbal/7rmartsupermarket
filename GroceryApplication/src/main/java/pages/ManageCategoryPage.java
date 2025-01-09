@@ -34,11 +34,7 @@ public class ManageCategoryPage {
 	@FindBy(xpath="//button[@type='submit']") WebElement saveButton;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertMessage;
 	
-	public void clickOnManageCategoryButton()
-	{
-		manageCategoryButton.click();
-	}
-	
+		
 	public String getManageCategoryPageText()
 	{
 		return manageCategorypagetext.getText();	

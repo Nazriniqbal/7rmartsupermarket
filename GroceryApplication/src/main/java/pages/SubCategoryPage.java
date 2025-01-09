@@ -1,6 +1,7 @@
 package pages;
 
 import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,51 +36,56 @@ public class SubCategoryPage {
 	@FindBy(xpath="//select[@id='un']") WebElement selectSearchCategoryOption;
 	@FindBy(xpath="//input[@name='ut']") WebElement searchSubCategoryField;
 	@FindBy(xpath="//button[@name='Search']") WebElement searchOptionButton;
+	@FindBy(xpath="//center[text()='.........RESULT NOT FOUND.......']") WebElement resultNotFoundMessage;
+	
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']") WebElement resetButton;
+	@FindBy(xpath="//h4[text()='List Sub Categories']") WebElement tabletitle;
 	
 	
-	public void clickOnSubCategoryButton()
+	
+	public boolean getSubCategoryPageText()
 	{
-		subCategoryButton.click();
+		return subCategorypagetext.isDisplayed();
 	}
 	
-	public String getSubCategoryPageText()
-	{
-		return subCategorypagetext.getText();
-	}
-	
-	public void clickOnNewSubCategoryButton()
+	public SubCategoryPage clickOnNewSubCategoryButton()
 	{
 		newSubCategoryButton.click();
+		return this;
 	}
 	public boolean isAddSubCategoryPageLoaded()
 	{
 		return addSubCategoryPage.isDisplayed();
 	}
-	public void clickOnSelectCategoryOption()
+	public SubCategoryPage clickOnSelectCategoryOption()
 	{
 		gu.selectDropdownWithIndex(selectCategoryOption, 1);
+		return this;
 		
 	}
-	public void enterSubCategoryField()
+	public SubCategoryPage enterSubCategoryField()
 
 	{   
 		subCategoryfield.sendKeys("iphone66" +gu.generateCurrentDateAndTime());
+		return this;
 		
 	}
-	public void clickOnChoosefile()
+	public SubCategoryPage clickOnChoosefile()
 	{
 	 	choosefile.sendKeys("C:\\Users\\DELL\\Pictures\\Screenshots\\Screenshot 2025-01-06 211752.png");
+	 	return this;
 	}
-	public void clickOnSaveButton()
+	public SubCategoryPage clickOnSaveButton()
 	{
 		saveButton.click();
 		//gu.clickUsingJavaScriptMethod(saveButton);
+		return this;
+		
 	}
 	
-	public String getAlertMessage()
+	public boolean getAlertMessage()
 	{
-		return alertmessage.getText();
+		return alertmessage.isDisplayed();
 	}
 	
 	/*public void loginByUsingExcelData3() throws IOException
@@ -94,33 +100,47 @@ public class SubCategoryPage {
 		
 	}*/
 	
-	public void clickOnSearchButton()
+	public SubCategoryPage clickOnSearchButton()
 	{
 		//gu.clickUsingJavaScriptMethod(searchButton);
 		searchButton.click();
+		return this;
 	}
-	public void clickOnSelectSearchCategoryOption()
+	public SubCategoryPage clickOnSelectSearchCategoryOption()
 	{
 		
 		gu.selectDropdownWithIndex(selectSearchCategoryOption, 5);
-		
+		return this;
 	
 	}
-	public void enterSearchSubCategoryField()
+	public SubCategoryPage enterSearchSubCategoryField()
 
 	{   
 		searchSubCategoryField.sendKeys("Toycar");
+		return this;
 		
 	}
-	public void clickOnSearchOptionButton()
+	public SubCategoryPage clickOnSearchOptionButton()
 	{
 		//gu.clickUsingJavaScriptMethod(searchOptionButton);
 		searchOptionButton.click();
+		return this;
 	}
 	
-	public void clickOnResetButton()
+	public boolean checkOnResult()
+	{
+		return resultNotFoundMessage.isDisplayed();
+	}
+	
+	public SubCategoryPage clickOnResetButton()
 	{
 		resetButton.click();
+		return this;
+	}
+	
+	public boolean checkOnTableTitleIsDisplayed() {
+		
+		return tabletitle.isDisplayed();
 	}
 	
 	

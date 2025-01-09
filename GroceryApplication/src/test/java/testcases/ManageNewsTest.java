@@ -5,78 +5,64 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageNewsPage;
 
 public class ManageNewsTest extends BaseClass {
+	LoginPage lp;
+	HomePage hp;
+	ManageNewsPage mnp;
 
   @Test(groups="smoke")
-  public void addManageNews() throws IOException {
-	  LoginPage login = new LoginPage(driver);
-	  login.loginByUsingExcelData();
+  public void verifyAddManageNews() throws IOException {
 	  
-	  HomePage home=new HomePage(driver);
-	  home.getHomePageText();
-	  home.clickOnManageNewsButton();
-	  
-	  ManageNewsPage mnt=new ManageNewsPage(driver);
-	  mnt.clickOnManageNewsButton();
-	  mnt.clickOnNewManageNewsButton();
-	  mnt.enterManageNewsField();
-	  mnt.clickOnSaveButton();
-	  boolean actualResult = login.getAlertMessage().contains("News Created Successfully");
+	  lp = new LoginPage(driver);
+	  hp=lp.loginByUsingExcelData();
+	  hp=new HomePage(driver);
+	  mnp=hp.clickOnManageNewsButton().clickOnNewManageNewsButton().enterManageNewsField().clickOnSaveButton();
+	  boolean actualResult = mnp.getAlertMessage();
 	  boolean expectedResult = true;
-	  Assert.assertEquals(expectedResult,actualResult,"Alert message is as expected");
+	  Assert.assertEquals(expectedResult,actualResult,Constants.MNP_verifyAddManageNews);
   }
   @Test
-  public void searchManageNews() throws IOException
+  public void verifySearchManageNews() throws IOException
   {
-	  LoginPage login = new LoginPage(driver);
-	  login.loginByUsingExcelData();
-	  
-	  HomePage home=new HomePage(driver);
-	  home.getHomePageText();
-	  home.clickOnManageNewsButton();
-	  ManageNewsPage mnt=new ManageNewsPage(driver);
-	  mnt.clickOnManageNewsButton();
-	  mnt.clickOnManageNewsSearchButton();
-	  mnt.enterSearchNewsTitleField();
-	  mnt.clickOnSearchButton();
-	  
-  }
+	  lp = new LoginPage(driver);
+	  hp=lp.loginByUsingExcelData();
+	  hp=new HomePage(driver);
+	  mnp=hp.clickOnManageNewsButton().clickOnManageNewsSearchButton().enterSearchNewsTitleField().clickOnSearchButton();
+	  boolean actualResult = mnp.checkOnTableTitleIsDisplayed();
+	  boolean expectedResult = true;
+	  Assert.assertEquals(expectedResult,actualResult,Constants.MNP_verifySearchManageNews);
+	 
+   }
+  
   @Test
-  public void resetManageNews() throws IOException
+  public void verifyResetManageNews() throws IOException
   {
-	  LoginPage login = new LoginPage(driver);
-	  login.loginByUsingExcelData();
 	  
-	  HomePage home=new HomePage(driver);
-	  home.getHomePageText();
-	  home.clickOnManageNewsButton();
-	  ManageNewsPage mnt=new ManageNewsPage(driver);
-	  mnt.clickOnManageNewsButton();
-	  mnt.clickOnResetButton();
+	  lp = new LoginPage(driver);
+	  hp=lp.loginByUsingExcelData();
+	  hp=new HomePage(driver);
+	  mnp=hp.clickOnManageNewsButton().clickOnResetButton();
+	  boolean actualResult = mnp.checkOnTableTitleIsDisplayed();
+	  boolean expectedResult = true;
+	  Assert.assertEquals(expectedResult,actualResult,Constants.MNP_verifyResetManageNews);
   
   }
   
   @Test
-  public void editManageNews() throws IOException
+  public void verifyEditManageNews() throws IOException
   {
-	  LoginPage login = new LoginPage(driver);
-	  login.loginByUsingExcelData();
-	  
-	  HomePage home=new HomePage(driver);
-	  home.getHomePageText();
-	  home.clickOnManageNewsButton();
-	  ManageNewsPage mnt=new ManageNewsPage(driver);
-	  mnt.clickOnManageNewsButton();
-	  mnt.clickOnEditButton();
-	  mnt.enterUpdateNewsfield();
-	  mnt.clickOnUpdateButton();
-	  boolean actualResult = login.getAlertMessage().contains("News Updated Successfully ");
+	  lp = new LoginPage(driver);
+	  hp=lp.loginByUsingExcelData();
+	  hp=new HomePage(driver);
+	  mnp=hp.clickOnManageNewsButton().clickOnEditButton().enterUpdateNewsfield().clickOnUpdateButton();
+      boolean actualResult = mnp.getAlertMessage();
 	  boolean expectedResult = true;
-	  Assert.assertEquals(expectedResult,actualResult,"Alert message is as expected");
+	  Assert.assertEquals(expectedResult,actualResult,Constants.MNP_verifyEditManageNews);
   
   }
 

@@ -8,13 +8,13 @@
   </listeners>
   <test thread-count="5" name="myTest(failed)">
     <classes>
-      <class name="testcases.ManageCategoryTest">
+      <class name="testcases.CategoryTest">
         <methods>
           <include name="initializeBrowser"/>
-          <include name="verifyAddManageCategory"/>
+          <include name="addCategory"/>
           <include name="driverQuit"/>
         </methods>
-      </class> <!-- testcases.ManageCategoryTest -->
+      </class> <!-- testcases.CategoryTest -->
     </classes>
   </test> <!-- myTest(failed) -->
 </suite> <!-- Failed suite [Mytestsuite] -->

@@ -5,64 +5,50 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.CategoryPage;
 import pages.HomePage;
 import pages.LoginPage;
+import pages.SubCategoryPage;
 
 public class CategoryTest extends BaseClass{
+	LoginPage lp;
+	HomePage hp;
+	CategoryPage cp;
 
 	@Test
-	  public void addCategory() throws IOException {
-		  LoginPage login = new LoginPage(driver);
-		  login.loginByUsingExcelData();
-		  
-		  HomePage home=new HomePage(driver);
-		  home.getHomePageText();
-		  home.clickOnCategoryButton();
-		  
-		  CategoryPage cp=new CategoryPage(driver);
-		  //cp.clickOnCategoryButton();
-		  cp.clickOnNewCategoryButton();
-		  cp.enterOnCategoryField();
-		  cp.selectGroupsOnCategoryList();
-		  cp.clickOnRadioButton1();
-		  cp.clickOnRadioButton2();
-		  cp.clickOnChoosefile();
-		  cp.clickOnSaveButton();
-		  boolean actualResult = cp.getAlertMessage().contains("Category Created Successfully");
+	  public void verifyAddCategory() throws IOException {
+		  lp = new LoginPage(driver);
+		  hp=lp.loginByUsingExcelData();
+		  hp=new HomePage(driver);
+		  cp= hp.clickOnCategoryButton().clickOnNewCategoryButton().enterOnCategoryField().selectGroupsOnCategoryList()
+				  .clickOnChoosefile().clickOnRadioButton1().clickOnRadioButton2().clickOnSaveButton();
+		  boolean actualResult = cp.getAlertMessage();
 		  boolean expectedResult = true;
-		  Assert.assertEquals(expectedResult,actualResult,"Alert message is not as expected");  
+		  Assert.assertEquals(expectedResult,actualResult,Constants.CP_verifyAddCategory);  
 		  
 	}
 	@Test
-	  public void searchCategory() throws IOException {
-		  LoginPage login = new LoginPage(driver);
-		  login.loginByUsingExcelData();
-		  
-		  HomePage home=new HomePage(driver);
-		  home.getHomePageText();
-		  home.clickOnCategoryButton();
-		  
-		  CategoryPage cp=new CategoryPage(driver);
-		  //cp.clickOnCategoryButton();
-		  cp.clickOnSearchButton();
-		  cp.enterOnSearchCategoryField();
-		  cp.clickOnSearchsubmitButton();
-		  
+	  public void verifySearchCategory() throws IOException {
+		  lp = new LoginPage(driver);
+		  hp=lp.loginByUsingExcelData();
+		  hp=new HomePage(driver);
+		  cp= hp.clickOnCategoryButton().clickOnSearchButton().enterOnSearchCategoryField().clickOnSearchsubmitButton();
+		  boolean actualResult = cp.checkOnResultMessage();
+		  boolean expectedResult = true;
+		  Assert.assertEquals(expectedResult,actualResult,Constants.CP_verifySearchCategory); 
      }
 	
 	@Test
-	  public void resetCategory() throws IOException {
-		  LoginPage login = new LoginPage(driver);
-		  login.loginByUsingExcelData();
+	  public void verifyResetCategory() throws IOException {
 		  
-		  HomePage home=new HomePage(driver);
-		  home.getHomePageText();
-		  home.clickOnCategoryButton();
-		  
-		  CategoryPage cp=new CategoryPage(driver);
-		  //cp.clickOnCategoryButton();
-		  cp.clickOnResetButton();
+		  lp = new LoginPage(driver);
+		  hp=lp.loginByUsingExcelData();
+		  hp=new HomePage(driver);
+		  cp= hp.clickOnCategoryButton().clickOnResetButton();
+		  boolean actualResult = cp.checkOnTableTitleIsDisplayed();
+		  boolean expectedResult = true;
+		  Assert.assertEquals(expectedResult,actualResult,Constants.CP_verifyResetCategory); 
 	}
 	
 }

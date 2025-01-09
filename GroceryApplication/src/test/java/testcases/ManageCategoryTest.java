@@ -24,9 +24,6 @@ public class ManageCategoryTest extends BaseClass{
 				  .selectGroupsOnCategoryList().clickOnChoosefile().clickOnRadioButton1()
 				  .clickOnRadioButton2().clickOnSaveButton();
 		  
-
-		  
-		 
 		  boolean actualResult = mcp.getAlertMessage();
 		  boolean expectedResult = true;
 		  Assert.assertEquals(expectedResult,actualResult,"Alert message is not as expected");  

@@ -29,7 +29,10 @@ public class ManageNewsPage {
 	@FindBy(xpath="//a[text()=' Search']") WebElement searchButton;
 	@FindBy(xpath="//input[@name='un']") WebElement searchNewstitlefield;
 	@FindBy(xpath="//button[@name='Search']") WebElement submitSearchButton;
+	@FindBy(xpath="") WebElement message;
+
 	@FindBy(xpath="//a[text()=' Reset']") WebElement resetButton;
+	@FindBy(xpath="//h4[text()='Manage News']") WebElement tableTitle;
 	
 	@FindBy(xpath="//input[@type='hidden']") WebElement editNews;
 	@FindBy(xpath="//textarea[@id='news']") WebElement updateNewsfield;
@@ -37,75 +40,85 @@ public class ManageNewsPage {
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertupdatenewsmessage;
 	
 	
-	public void clickOnManageNewsButton()
-	{
-		manageNewsButton.click();
-	}
-	
 	public String getManageNewsPageText()
 	{
 		return manageNewspagetext.getText();	
 	}
-	public void clickOnNewManageNewsButton()
+	public ManageNewsPage clickOnNewManageNewsButton()
 	{
 		newManageNewsButton.click();
+		return this;
 	}
 	public boolean isAddManageNewsPageLoaded()
 	{
 		return manageNewspagetitle.isDisplayed();
 	}
 	
-	public void enterManageNewsField()
+	public ManageNewsPage enterManageNewsField()
 
 	{   
 		newsField.sendKeys("GroceryApplication News"+gu.generateCurrentDateAndTime());
+		return this;
 		
 	}
-	public void clickOnSaveButton()
+	public ManageNewsPage clickOnSaveButton()
 	{
 		saveButton.click();
+		return this;
 	}
 	
-	public String getAlertMessage()
+	public boolean getAlertMessage()
 	{
-		return alertMessage.getText();
+		return alertMessage.isDisplayed();
 	}
 	
-	public void clickOnManageNewsSearchButton()
+	public ManageNewsPage clickOnManageNewsSearchButton()
 	{
 		searchButton.click();
+		return this;
 	}
-	public void enterSearchNewsTitleField()
+	public ManageNewsPage enterSearchNewsTitleField()
 
 	{   
 		searchNewstitlefield.sendKeys("GroceryApplication News");
+		return this;
 		
 	}
-	public void clickOnSearchButton()
+	public ManageNewsPage clickOnSearchButton()
 	{
 		submitSearchButton.click();
+		return this;
 	}
-	public void clickOnResetButton()
+	public ManageNewsPage clickOnResetButton()
 	{
 		resetButton.click();
+		return this;
+	}
+	public boolean checkOnTableTitleIsDisplayed()
+	{
+		return tableTitle.isDisplayed();
 	}
 	
-	public void clickOnEditButton()
+	
+	public ManageNewsPage clickOnEditButton()
 	{
 		editNews.click();
+		return this;
 	}
 	
-	public void enterUpdateNewsfield()
+	public ManageNewsPage enterUpdateNewsfield()
 	{
 		updateNewsfield.sendKeys("helo news world");
+		return this;
 	}
-	public void clickOnUpdateButton()
+	public ManageNewsPage clickOnUpdateButton()
 	{
 		updatenews.click();
+		return this;
 	}
-	public String getUpdateAlertMessage()
+	public boolean getUpdateAlertMessage()
 	{
-		return alertupdatenewsmessage.getText();
+		return alertupdatenewsmessage.isDisplayed();
 	}
 	
 }
