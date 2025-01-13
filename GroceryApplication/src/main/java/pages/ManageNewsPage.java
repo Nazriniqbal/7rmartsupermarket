@@ -19,7 +19,7 @@ public class ManageNewsPage {
 		PageFactory.initElements(driver,this);
 	}
 	
-	@FindBy(xpath="//p[text()='Manage News']") WebElement manageNewsButton;
+	
 	@FindBy(xpath="//h1[text()='Manage News']") WebElement manageNewspagetext;
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']") WebElement newManageNewsButton;
 	@FindBy(xpath="//h3[text()='Enter News Informations']") WebElement manageNewspagetitle;
@@ -29,12 +29,12 @@ public class ManageNewsPage {
 	@FindBy(xpath="//a[text()=' Search']") WebElement searchButton;
 	@FindBy(xpath="//input[@name='un']") WebElement searchNewstitlefield;
 	@FindBy(xpath="//button[@name='Search']") WebElement submitSearchButton;
-	@FindBy(xpath="") WebElement message;
+	
 
 	@FindBy(xpath="//a[text()=' Reset']") WebElement resetButton;
 	@FindBy(xpath="//h4[text()='Manage News']") WebElement tableTitle;
 	
-	@FindBy(xpath="//input[@type='hidden']") WebElement editNews;
+	@FindBy(xpath="//a[@class='btn btn-sm btn btn-primary btncss']") WebElement editNews;
 	@FindBy(xpath="//textarea[@id='news']") WebElement updateNewsfield;
 	@FindBy(xpath="//button[text()='Update']") WebElement updatenews;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertupdatenewsmessage;

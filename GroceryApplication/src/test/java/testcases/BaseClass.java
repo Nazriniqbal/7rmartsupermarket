@@ -3,9 +3,7 @@ import utilities.ScreenshotUtility;
 import utilities.WaitUtilities;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
-
 import constants.Constants;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -56,13 +54,13 @@ public class BaseClass {
 
 	  @AfterMethod(alwaysRun=true)
 	  public void driverQuit(ITestResult itestresult) throws IOException {
-	 // driver.quit();
+	
 		  if(itestresult.getStatus()==ITestResult.FAILURE)
 			{
 				ScreenshotUtility screenshot=new ScreenshotUtility();
 				screenshot.getScreenshot(driver,itestresult.getName());
 			}
-
+		  driver.quit();
 	  }
 
 }

@@ -1,7 +1,6 @@
 package pages;
 
 import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,29 +24,26 @@ public class LoginPage {
 	@FindBy(xpath="//button[@type='submit']") WebElement signinbutton;
     @FindBy(xpath="//span[text()='7rmart supermarket']") WebElement homepage;
 	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") WebElement alertmessage;
-	public void enterUsername(String username)
+	public LoginPage enterUsername(String username)
 
 	{
 		usernamefield.sendKeys(username);
+		return this;
 		
 	}
-	public void enterPassword(String password)
+	public LoginPage enterPassword(String password)
 
 	{
 		passwordfield.sendKeys(password);
-		
-	}
-	public void clickOnRememberMeButton()
-
-	{
-		remembermebutton.click();
-		
+		return this;
 	}
 	
-	public void clickOnSignInButton()
+	
+	public HomePage clickOnSignInButton()
 
 	{
 		signinbutton.click();
+		return new HomePage(driver);
 		
 	}
 	public boolean ishomepageloaded()

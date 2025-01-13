@@ -1,10 +1,8 @@
 package testcases;
 
 import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import constants.Constants;
 import pages.HomePage;
 import pages.LoginPage;
@@ -14,7 +12,7 @@ public class SubCategoryTest extends BaseClass{
 	LoginPage lp;
 	HomePage hp;
 	SubCategoryPage scp;
-  @Test
+  @Test(priority=1)
   public void verifyAddSubCategory() throws IOException {
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
@@ -25,7 +23,7 @@ public class SubCategoryTest extends BaseClass{
 	 boolean expectedResult = true;
 	 Assert.assertEquals(actualResult,expectedResult,Constants.SCP_verifyAddSubCategory);  
   }
-  @Test
+  @Test(priority=2)
   public void verifySearchSubCategory() throws IOException
   {
 	  lp = new LoginPage(driver);
@@ -41,7 +39,7 @@ public class SubCategoryTest extends BaseClass{
 	  
 	  
   }
-  @Test
+  @Test(priority=3)
   public void verifyResetSubCategory() throws IOException
   {
 	  lp = new LoginPage(driver);

@@ -5,17 +5,13 @@
 <listener class-name="listeners.RetryListener"></listener>
 </listeners>
 	<test threadcount="3" name="myTest">
-		
 		<classes>
-<!-- <class name="testcases.LoginTest"></class>
+
+<class name="testcases.LoginTest"></class>
+<class name="testcases.CategoryTest"></class>
 <class name="testcases.SubCategoryTest"></class>
- <class name="testcases.ManageNewsTest"></class>	-->
-<class name="testcases.CategoryTest"></class>	
-
-
-<!-- <class name="testcases.ManageCategoryTest"></class>-->
- 
-
-		</classes>
+<class name="testcases.ManageCategoryTest"></class>
+<class name="testcases.ManageNewsTest"></class> 
+        </classes>
 	</test>
 </suite>

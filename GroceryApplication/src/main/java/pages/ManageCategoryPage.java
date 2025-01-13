@@ -1,18 +1,21 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+import utilities.FileUploadUtility;
 import utilities.GeneralUtility;
+import utilities.WaitUtilities;
 
 
 
 public class ManageCategoryPage {
 	public WebDriver driver;
 	GeneralUtility gu=new GeneralUtility();
+	FileUploadUtility fu=new FileUploadUtility();
+	WaitUtilities wu=new WaitUtilities();
+	
 	public ManageCategoryPage(WebDriver driver)
 	
 	{
@@ -21,7 +24,7 @@ public class ManageCategoryPage {
 		PageFactory.initElements(driver,this);
 	}
 	
-	@FindBy(xpath="//p[text()='Manage Category']") WebElement manageCategoryButton;
+	
 	@FindBy(xpath="//h1[text()='List Categories']") WebElement manageCategorypagetext;
 	@FindBy(xpath="//a[text()=' New']") WebElement newCategoryButton;
 	@FindBy(xpath="//h1[text()='Add Category']") WebElement addCategoryPage;
@@ -50,38 +53,41 @@ public class ManageCategoryPage {
 	}
 	public ManageCategoryPage enterOnCategoryField()
 	{
-		categoryfield.sendKeys("phone");
+		categoryfield.sendKeys("phone"+gu.generateCurrentDateAndTime());
 		return this;
 	}
 	public ManageCategoryPage selectGroupsOnCategoryList()
 	{
-		//selectGroupsCategoryList.click();
-		gu.clickUsingJavaScriptMethod(selectGroupsCategoryList);
-		
+		selectGroupsCategoryList.click();
 		return this;
 	}
 	
 	public ManageCategoryPage clickOnChoosefile()
 	{
-		choosefile.sendKeys("C:\\Users\\DELL\\Pictures\\Screenshots\\Screenshot 2025-01-06 211752.png");
-		gu.scroll();
-		return this;
+	
+		fu.fileuploadSendkeys(choosefile);
+        return this;
 	}
 	
 	public ManageCategoryPage clickOnRadioButton1()
 	{
-		gu.selectRadioButton(radioButton1);
+		
+		gu.scrollToElement(driver,radioButton1);
+	    gu.hoverOverElement(driver,radioButton1);
 		return this;
 		
 	}
 	public  ManageCategoryPage clickOnRadioButton2()
 	{
-		gu.selectRadioButton(radioButton2);
+		
+		gu.scrollToElement(driver,radioButton2);
+		gu.hoverOverElement(driver,radioButton2);
 		return this;
 		
 	}
 	public ManageCategoryPage clickOnSaveButton()
 	{
+		wu.setExplicitWait(driver, saveButton);
 		saveButton.click();
 		return this;
 	}

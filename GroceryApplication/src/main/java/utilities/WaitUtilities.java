@@ -12,51 +12,51 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitUtilities {
 	
-	public static int Implicitwait=10;
-	public static int Explicitwait=10;
-	public static int Fluentwait=2;
+	public static int IMPLICITWAIT=10;
+	public static int EXPLICITWAIT=10;
+	public static int FLUENTWAIT=2;
 	
 	public void fluentWaitElements(WebDriver driver, WebElement element, String attribute, String attributeValue,
 			int total) {
 		Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(total))
-				.pollingEvery(Duration.ofSeconds( Fluentwait)).ignoring(NoSuchElementException.class);
+				.pollingEvery(Duration.ofSeconds( FLUENTWAIT)).ignoring(NoSuchElementException.class);
 		fluentWait.until(ExpectedConditions.attributeContains(element, attribute, attributeValue));
 	}
 	
 	public void waitForWebElementAlert(WebDriver driver) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Explicitwait));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.alertIsPresent());
 	}
 	public void waitUntilElementIsVisible(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.visibilityOf(null));
 	}
 	
 	public void setImplicitWait(WebDriver driver)
 	{
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Implicitwait));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICITWAIT));
 	}
 	public void setExplicitWait(WebDriver driver,WebElement element)
 	{
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(Explicitwait));
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(EXPLICITWAIT));
 		   wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
 	public static void waitForClickingElement(WebDriver driver,WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	public static void waitForTextToBePresentInEelement(WebDriver driver,WebElement element,String text) {
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.textToBePresentInElement(element, text));
 	}
 	public static void waitForElementToBeSelected(WebDriver driver,WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.elementToBeSelected(element));
 	}
 	public static void waitForAttributeToBe(WebDriver driver,WebElement element,String attribute,String value) {
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.attributeToBe(element,attribute,value));
 	}
 

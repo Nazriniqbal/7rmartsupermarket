@@ -1,15 +1,13 @@
 package testcases;
 
 import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import constants.Constants;
 import pages.CategoryPage;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.SubCategoryPage;
+
 
 public class CategoryTest extends BaseClass{
 	LoginPage lp;

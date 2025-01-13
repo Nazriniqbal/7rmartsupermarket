@@ -1,12 +1,9 @@
 package testcases;
 
 import java.io.IOException;
-
-
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import constants.Constants;
 import pages.HomePage;
 import pages.LoginPage;
@@ -29,9 +26,7 @@ public class LoginTest extends BaseClass{
 	  public void verifyUserLoginWithValidUsernameAndInvalidPassword(String username,String password) {
 		 
 		    login = new LoginPage(driver);
-		    login.enterUsername(username);
-		    login.enterPassword(password);
-		    login.clickOnSignInButton();
+		    home=login.enterUsername(username).enterPassword(password).clickOnSignInButton();
 		    boolean actualResult = login.getAlertMessage().contains("Invalid Username/Password");
 		    boolean expectedResult = true;
 		    Assert.assertEquals(expectedResult,actualResult,Constants.lp_verifyLoginWithValidUsernameAndInvalidPassword); 
@@ -48,8 +43,8 @@ public class LoginTest extends BaseClass{
 		  
 	    login = new LoginPage(driver);
 	    home=login.loginByUsingExcelData1();
-	    boolean actualResult = login.ishomepageloaded();
-	    boolean expectedResult = false;
+	    boolean actualResult = login.getAlertMessage().contains("Invalid Username/Password");
+	    boolean expectedResult = true;
 	    Assert.assertEquals(expectedResult,actualResult,Constants.lp_verifyLoginWithInvalidUsernameAndValidPassword);
 	  }
 	  
@@ -59,8 +54,8 @@ public class LoginTest extends BaseClass{
 		  
 	    login = new LoginPage(driver);
 	    home=login.loginByUsingExcelData2();
-	    boolean actualResult = login.ishomepageloaded();
-	    boolean expectedResult = false;
+	    boolean actualResult = login.getAlertMessage().contains("Invalid Username/Password");
+	    boolean expectedResult = true;
 	    Assert.assertEquals(expectedResult,actualResult,Constants.lp_verifyLoginWithInvalidUsernameAndInvalidPassword);
 	  }
 	  

@@ -1,16 +1,16 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+import utilities.FileUploadUtility;
 import utilities.GeneralUtility;
 
 public class CategoryPage {
 	public WebDriver driver;
 	GeneralUtility gu=new GeneralUtility();
+	FileUploadUtility fu=new FileUploadUtility();
 	public CategoryPage(WebDriver driver)
 	
 	{
@@ -19,7 +19,7 @@ public class CategoryPage {
 		PageFactory.initElements(driver,this);
 	}
 	
-	@FindBy(xpath="//p[text()='Category']") WebElement categoryButton;
+	
 	@FindBy(xpath="//h1[text()='List Categories']") WebElement categorypagetext;
 	@FindBy(xpath="//a[text()=' New']") WebElement newCategoryButton;
 	@FindBy(xpath="//h1[text()='Add Category']") WebElement addCategoryPage;
@@ -69,19 +69,21 @@ public class CategoryPage {
 	
 	public CategoryPage clickOnChoosefile()
 	{
-		choosefile.sendKeys("C:\\Users\\DELL\\Pictures\\Screenshots\\Screenshot 2025-01-06 211752.png");
+		fu.fileuploadSendkeys(choosefile);
 		return this;
 	}
 	
 	public CategoryPage clickOnRadioButton1()
 	{
-		gu.selectRadioButton(radioButton1);
+		gu.scrollToElement(driver,radioButton1);
+	    gu.hoverOverElement(driver,radioButton1);
 		return this;
 		
 	}
 	public CategoryPage clickOnRadioButton2()
 	{
-		gu.selectRadioButton(radioButton2);
+		gu.scrollToElement(driver,radioButton2);
+		gu.hoverOverElement(driver,radioButton2);
 		return this;
 		
 		

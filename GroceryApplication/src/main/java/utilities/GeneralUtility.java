@@ -1,8 +1,8 @@
 package utilities;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
+import java.util.Date;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -48,9 +48,9 @@ public class GeneralUtility {
 	}
 
 	
-	public void hoverOverElement(WebElement element) { 
+	public void hoverOverElement(WebDriver driver,WebElement element) { 
 		Actions actions = new Actions(driver); 
-		actions.moveToElement(element).perform();
+		actions.moveToElement(element).click().perform();
 		}
 	public void dragAndDrop(WebElement source, WebElement destination) {
 		Actions action = new Actions(driver);
@@ -128,7 +128,7 @@ public class GeneralUtility {
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)"); 
 
 	}
-	public void scrollToElement(WebElement element) {
+	public void scrollToElement(WebDriver driver,WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView();",element);
 	}
@@ -161,5 +161,6 @@ public class GeneralUtility {
 		return formatter.format(date);
 
 		}
+	
 
 }
