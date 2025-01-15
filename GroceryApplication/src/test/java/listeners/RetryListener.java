@@ -13,7 +13,7 @@ public class RetryListener implements IAnnotationTransformer{
 	public void transform(final ITestAnnotation annotation, final Class testClass, final Constructor testConstructor,
 			final Method testMethod) {
 		annotation.setRetryAnalyzer(Retry.class);
-		/* /*ITestAnnotation annotation: Represents the annotation of the current test method. By modifying this, you can set properties dynamically.
+		/* ITestAnnotation annotation: Represents the annotation of the current test method. By modifying this, you can set properties dynamically.
 Class testClass: The class in which the test method is declared.
 Constructor testConstructor: The constructor of the test method (if applicable).
 Method testMethod: The actual test method being executed.  

@@ -14,7 +14,7 @@ public class ManageNewsTest extends BaseClass {
 	ManageNewsPage mnp;
 
   @Test(groups="smoke")
-  public void verifyAddManageNews() throws IOException {
+  public void verifyNewManageNewsWithValidDetails() throws IOException {
 	  
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
@@ -25,7 +25,7 @@ public class ManageNewsTest extends BaseClass {
 	  Assert.assertEquals(expectedResult,actualResult,Constants.MNP_verifyAddManageNews);
   }
   @Test
-  public void verifySearchManageNews() throws IOException
+  public void verifyUserIsAbleToSearchTheManageNewsIsPresent() throws IOException
   {
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
@@ -38,7 +38,7 @@ public class ManageNewsTest extends BaseClass {
    }
   
   @Test
-  public void verifyResetManageNews() throws IOException
+  public void verifyUserIsAbleToResetTheManageNews() throws IOException
   {
 	  
 	  lp = new LoginPage(driver);
@@ -52,7 +52,7 @@ public class ManageNewsTest extends BaseClass {
   }
   
   @Test
-  public void verifyEditManageNews() throws IOException
+  public void verifyUserIsAbleEditTheManageNewsWithValidDetails() throws IOException
   {
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();

@@ -13,7 +13,7 @@ public class SubCategoryTest extends BaseClass{
 	HomePage hp;
 	SubCategoryPage scp;
   @Test(priority=1)
-  public void verifyAddSubCategory() throws IOException {
+  public void verifyNewSubCategoryWithValidDetails() throws IOException {
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
 	  hp=new HomePage(driver);
@@ -24,7 +24,7 @@ public class SubCategoryTest extends BaseClass{
 	 Assert.assertEquals(actualResult,expectedResult,Constants.SCP_verifyAddSubCategory);  
   }
   @Test(priority=2)
-  public void verifySearchSubCategory() throws IOException
+  public void verifyUserIsAbleToSearchTheSubCategoryIsNotPresent() throws IOException
   {
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
@@ -40,7 +40,7 @@ public class SubCategoryTest extends BaseClass{
 	  
   }
   @Test(priority=3)
-  public void verifyResetSubCategory() throws IOException
+  public void verifyUserIsAbleToResetTheSubCategory() throws IOException
   {
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();

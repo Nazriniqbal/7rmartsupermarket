@@ -13,7 +13,7 @@ public class ManageCategoryTest extends BaseClass{
 	ManageCategoryPage mcp;
 	
 	@Test(retryAnalyzer=retry.Retry.class,groups="smoke")
-	  public void verifyAddManageCategory() throws IOException {
+	  public void verifyNewManageCategoryWithValidDetails() throws IOException {
 		   lp = new LoginPage(driver);
 		  hp=lp.loginByUsingExcelData();
 		  mcp=  hp.clickOnManageCategoryButton().clickOnNewCategoryButton().enterOnCategoryField()

@@ -15,7 +15,7 @@ public class CategoryTest extends BaseClass{
 	CategoryPage cp;
 
 	@Test
-	  public void verifyAddCategory() throws IOException {
+	  public void verifyNewCategoryWithValidDetails() throws IOException {
 		  lp = new LoginPage(driver);
 		  hp=lp.loginByUsingExcelData();
 		  hp=new HomePage(driver);
@@ -27,7 +27,7 @@ public class CategoryTest extends BaseClass{
 		  
 	}
 	@Test
-	  public void verifySearchCategory() throws IOException {
+	  public void verifyUserIsAbleToSearchTheCategoryIsNotPresent() throws IOException {
 		  lp = new LoginPage(driver);
 		  hp=lp.loginByUsingExcelData();
 		  hp=new HomePage(driver);
@@ -38,7 +38,7 @@ public class CategoryTest extends BaseClass{
      }
 	
 	@Test
-	  public void verifyResetCategory() throws IOException {
+	  public void verifyUserIsAbleToResetTheCategory() throws IOException {
 		  
 		  lp = new LoginPage(driver);
 		  hp=lp.loginByUsingExcelData();
