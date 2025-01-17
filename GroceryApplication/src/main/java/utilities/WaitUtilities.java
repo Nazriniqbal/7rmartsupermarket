@@ -27,21 +27,17 @@ public class WaitUtilities {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.alertIsPresent());
 	}
-	public void waitUntilElementIsVisible(WebDriver driver)
+	public void waitUntilElementIsVisible(WebDriver driver,WebElement element)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
-		wait.until(ExpectedConditions.visibilityOf(null));
+		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
-	public void setImplicitWait(WebDriver driver)
+	public void implicitWait(WebDriver driver)
 	{
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICITWAIT));
 	}
-	public void setExplicitWait(WebDriver driver,WebElement element)
-	{
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(EXPLICITWAIT));
-		   wait.until(ExpectedConditions.visibilityOf(element));
-	}
+	
 	
 	public static void waitForClickingElement(WebDriver driver,WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(EXPLICITWAIT));

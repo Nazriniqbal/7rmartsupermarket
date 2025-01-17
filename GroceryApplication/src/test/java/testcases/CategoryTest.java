@@ -15,10 +15,9 @@ public class CategoryTest extends BaseClass{
 	CategoryPage cp;
 
 	@Test
-	  public void verifyNewCategoryWithValidDetails() throws IOException {
+	  public void verifyUserIsAbleToAddNewCategoryWithValidDetails() throws IOException {
 		  lp = new LoginPage(driver);
 		  hp=lp.loginByUsingExcelData();
-		  hp=new HomePage(driver);
 		  cp= hp.clickOnCategoryButton().clickOnNewCategoryButton().enterOnCategoryField().selectGroupsOnCategoryList()
 				  .clickOnChoosefile().clickOnRadioButton1().clickOnRadioButton2().clickOnSaveButton();
 		  boolean actualResult = cp.getAlertMessage();
@@ -27,10 +26,9 @@ public class CategoryTest extends BaseClass{
 		  
 	}
 	@Test
-	  public void verifyUserIsAbleToSearchTheCategoryIsNotPresent() throws IOException {
+	  public void verifyUserIsAbleToSearchTheCategoryThatIsNotPresent() throws IOException {
 		  lp = new LoginPage(driver);
 		  hp=lp.loginByUsingExcelData();
-		  hp=new HomePage(driver);
 		  cp= hp.clickOnCategoryButton().clickOnSearchButton().enterOnSearchCategoryField().clickOnSearchsubmitButton();
 		  boolean actualResult = cp.checkOnResultMessage();
 		  boolean expectedResult = true;
@@ -42,7 +40,6 @@ public class CategoryTest extends BaseClass{
 		  
 		  lp = new LoginPage(driver);
 		  hp=lp.loginByUsingExcelData();
-		  hp=new HomePage(driver);
 		  cp= hp.clickOnCategoryButton().clickOnResetButton();
 		  boolean actualResult = cp.checkOnTableTitleIsDisplayed();
 		  boolean expectedResult = true;

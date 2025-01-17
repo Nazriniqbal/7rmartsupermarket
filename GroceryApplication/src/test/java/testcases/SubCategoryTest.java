@@ -13,10 +13,9 @@ public class SubCategoryTest extends BaseClass{
 	HomePage hp;
 	SubCategoryPage scp;
   @Test(priority=1)
-  public void verifyNewSubCategoryWithValidDetails() throws IOException {
+  public void verifyUserIsAbleToAddNewSubCategoryWithValidDetails() throws IOException {
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
-	  hp=new HomePage(driver);
 	  scp= hp.clickOnSubCategoryButton().clickOnNewSubCategoryButton().clickOnSelectCategoryOption().enterSubCategoryField()
 			 .clickOnChoosefile().clickOnSaveButton();
 	 boolean actualResult = scp.getAlertMessage();
@@ -28,7 +27,6 @@ public class SubCategoryTest extends BaseClass{
   {
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
-	  hp=new HomePage(driver);
 	  scp= hp.clickOnSubCategoryButton().clickOnSearchButton().clickOnSelectSearchCategoryOption().enterSearchSubCategoryField()
 			  .clickOnSearchOptionButton();
 	  boolean expectedResult = true;
@@ -44,7 +42,6 @@ public class SubCategoryTest extends BaseClass{
   {
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
-	  hp=new HomePage(driver);
 	  scp= hp.clickOnSubCategoryButton().clickOnResetButton();
 	  boolean expectedResult = true;
 	  boolean actualResult = scp.checkOnTableTitleIsDisplayed();

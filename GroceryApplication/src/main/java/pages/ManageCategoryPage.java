@@ -87,7 +87,7 @@ public class ManageCategoryPage {
 	}
 	public ManageCategoryPage clickOnSaveButton()
 	{
-		wu.setExplicitWait(driver, saveButton);
+		wu.waitUntilElementIsVisible(driver,saveButton);
 		saveButton.click();
 		return this;
 	}

@@ -48,7 +48,7 @@ public class BaseClass {
 		  
 		  driver.get(prop.getProperty("url"));
 		  driver.manage().window().maximize();
-		  waitutilities.setImplicitWait(driver);
+		  waitutilities.implicitWait(driver);
 		  
 	  }
 

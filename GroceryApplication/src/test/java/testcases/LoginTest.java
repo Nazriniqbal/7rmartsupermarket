@@ -16,7 +16,6 @@ public class LoginTest extends BaseClass{
 		  
 		  login=new LoginPage(driver);
 		  home= login.loginByUsingExcelData();
-		 
 		  boolean autualreasult=login.ishomepageloaded();
 		  boolean expectedresult=true;
 		  Assert.assertEquals(expectedresult, autualreasult,Constants.lp_verifyLoginWithVaildCredenials);
