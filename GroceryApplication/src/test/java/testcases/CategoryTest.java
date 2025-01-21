@@ -14,7 +14,7 @@ public class CategoryTest extends BaseClass{
 	HomePage hp;
 	CategoryPage cp;
 
-	@Test
+	@Test(groups="smoke")
 	  public void verifyUserIsAbleToAddNewCategoryWithValidDetails() throws IOException {
 		  lp = new LoginPage(driver);
 		  hp=lp.loginByUsingExcelData();
@@ -22,7 +22,7 @@ public class CategoryTest extends BaseClass{
 				  .clickOnChoosefile().clickOnRadioButton1().clickOnRadioButton2().clickOnSaveButton();
 		  boolean actualResult = cp.getAlertMessage();
 		  boolean expectedResult = true;
-		  Assert.assertEquals(expectedResult,actualResult,Constants.CP_verifyAddCategory);  
+		  Assert.assertEquals(expectedResult,actualResult,Constants.CP_verifyUserIsAbleToAddNewCategoryWithValidDetails);  
 		  
 	}
 	@Test
@@ -32,7 +32,7 @@ public class CategoryTest extends BaseClass{
 		  cp= hp.clickOnCategoryButton().clickOnSearchButton().enterOnSearchCategoryField().clickOnSearchsubmitButton();
 		  boolean actualResult = cp.checkOnResultMessage();
 		  boolean expectedResult = true;
-		  Assert.assertEquals(expectedResult,actualResult,Constants.CP_verifySearchCategory); 
+		  Assert.assertEquals(expectedResult,actualResult,Constants.CP_verifyUserIsAbleToSearchTheCategoryThatIsNotPresent); 
      }
 	
 	@Test
@@ -43,7 +43,7 @@ public class CategoryTest extends BaseClass{
 		  cp= hp.clickOnCategoryButton().clickOnResetButton();
 		  boolean actualResult = cp.checkOnTableTitleIsDisplayed();
 		  boolean expectedResult = true;
-		  Assert.assertEquals(expectedResult,actualResult,Constants.CP_verifyResetCategory); 
+		  Assert.assertEquals(expectedResult,actualResult,Constants.CP_verifyUserIsAbleToResetTheCategory); 
 	}
 	
 }

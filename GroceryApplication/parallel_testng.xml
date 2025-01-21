@@ -7,7 +7,7 @@
 </test>
 <test thread-count="3" name="Test2">
 <classes>
-<class name="testcases.ManageCategoryTest"></class>
+<class name="testcases.CategoryTest"></class>
 </classes>
 </test>
 </suite>

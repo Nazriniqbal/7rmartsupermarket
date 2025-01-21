@@ -51,34 +51,35 @@ public class SubCategoryPage {
 		newSubCategoryButton.click();
 		return this;
 	}
+	
 	public boolean isAddSubCategoryPageLoaded()
 	{
 		return addSubCategoryPage.isDisplayed();
 	}
+	
 	public SubCategoryPage clickOnSelectCategoryOption()
 	{
-		gu.selectDropdownWithIndex(selectCategoryOption, 1);
+		gu.selectDropdownWithIndex(selectCategoryOption, 2);
 		return this;
-		
 	}
+	
 	public SubCategoryPage enterSubCategoryField()
 
 	{   
 		subCategoryfield.sendKeys("iphone66" +gu.generateCurrentDateAndTime());
 		return this;
-		
 	}
+	
 	public SubCategoryPage clickOnChoosefile()
 	{
 		fu.fileuploadSendkeys(choosefile);
-		
-	 	return this;
+		return this;
 	}
+	
 	public SubCategoryPage clickOnSaveButton()
 	{
 		saveButton.click();
 		return this;
-		
 	}
 	
 	public boolean getAlertMessage()
@@ -86,31 +87,26 @@ public class SubCategoryPage {
 		return alertmessage.isDisplayed();
 	}
 	
-	
-	
 	public SubCategoryPage clickOnSearchButton()
 	{
-		
 		searchButton.click();
 		return this;
 	}
+	
 	public SubCategoryPage clickOnSelectSearchCategoryOption()
 	{
-		
 		gu.selectDropdownWithIndex(selectSearchCategoryOption, 5);
 		return this;
-	
 	}
+	
 	public SubCategoryPage enterSearchSubCategoryField()
-
-	{   
+    {   
 		searchSubCategoryField.sendKeys("Toycar");
 		return this;
-		
 	}
+	
 	public SubCategoryPage clickOnSearchOptionButton()
 	{
-		
 		searchOptionButton.click();
 		return this;
 	}
@@ -126,10 +122,9 @@ public class SubCategoryPage {
 		return this;
 	}
 	
-	public boolean checkOnTableTitleIsDisplayed() {
-		
+	public boolean checkOnTableTitleIsDisplayed() 
+	{
 		return tabletitle.isDisplayed();
 	}
-	
 	
 }

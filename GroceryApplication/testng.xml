@@ -10,8 +10,9 @@
 <class name="testcases.LoginTest"></class>
 <class name="testcases.CategoryTest"></class>
 <class name="testcases.SubCategoryTest"></class>
-<class name="testcases.ManageCategoryTest"></class>
-<class name="testcases.ManageNewsTest"></class> 
+<class name="testcases.ManageNewsTest"></class>
+<class name="testcases.ManageContactTest"></class>
+
         </classes>
 	</test>
 </suite>

@@ -17,9 +17,8 @@ public class HomePage {
 	@FindBy(xpath="//span[text()='7rmart supermarket']") WebElement homePageText;
     @FindBy(xpath="//p[text()='Sub Category']") WebElement subCategoryButton;
     @FindBy(xpath="//p[text()='Category']") WebElement categoryButton;
-	@FindBy(xpath="//p[text()='Manage Category']") WebElement manageCategoryButton;
 	@FindBy(xpath="//p[text()='Manage News']") WebElement manageNewsButton;
-	
+	@FindBy(xpath="//p[text()='Manage Contact']") WebElement managecontactbutton;
 	
 
 public String getHomePageText()
@@ -32,20 +31,23 @@ public SubCategoryPage clickOnSubCategoryButton()
 	subCategoryButton.click();
 	return new SubCategoryPage(driver);
 }
+
 public CategoryPage clickOnCategoryButton()
 {
 	categoryButton.click();
 	return new CategoryPage(driver);
 }
-public ManageCategoryPage clickOnManageCategoryButton()
-{
-	manageCategoryButton.click();
-	return new ManageCategoryPage(driver);
-}
+
 public ManageNewsPage clickOnManageNewsButton()
 {
 	manageNewsButton.click();
 	return new ManageNewsPage(driver);
+}
+
+public ManageContactPage clickOnManageContactButton()
+{
+	managecontactbutton.click();
+	return new ManageContactPage(driver);
 }
 
 }

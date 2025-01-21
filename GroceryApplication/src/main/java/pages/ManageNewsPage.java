@@ -29,7 +29,7 @@ public class ManageNewsPage {
 	@FindBy(xpath="//a[text()=' Search']") WebElement searchButton;
 	@FindBy(xpath="//input[@name='un']") WebElement searchNewstitlefield;
 	@FindBy(xpath="//button[@name='Search']") WebElement submitSearchButton;
-	
+	@FindBy(xpath="//center[text()='.........RESULT NOT FOUND.......']") WebElement resultNotFoundMessage;
 
 	@FindBy(xpath="//a[text()=' Reset']") WebElement resetButton;
 	@FindBy(xpath="//h4[text()='Manage News']") WebElement tableTitle;
@@ -80,7 +80,7 @@ public class ManageNewsPage {
 	public ManageNewsPage enterSearchNewsTitleField()
 
 	{   
-		searchNewstitlefield.sendKeys("GroceryApplication News");
+		searchNewstitlefield.sendKeys("FlowerShowNews");
 		return this;
 		
 	}
@@ -89,6 +89,11 @@ public class ManageNewsPage {
 		submitSearchButton.click();
 		return this;
 	}
+	public boolean checkOnResultMessage()
+	{
+		return resultNotFoundMessage.isDisplayed();
+	}
+	
 	public ManageNewsPage clickOnResetButton()
 	{
 		resetButton.click();

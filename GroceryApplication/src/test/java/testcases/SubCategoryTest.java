@@ -20,7 +20,7 @@ public class SubCategoryTest extends BaseClass{
 			 .clickOnChoosefile().clickOnSaveButton();
 	 boolean actualResult = scp.getAlertMessage();
 	 boolean expectedResult = true;
-	 Assert.assertEquals(actualResult,expectedResult,Constants.SCP_verifyAddSubCategory);  
+	 Assert.assertEquals(actualResult,expectedResult,Constants.SCP_verifyUserIsAbleToAddNewSubCategoryWithValidDetails);  
   }
   @Test(priority=2)
   public void verifyUserIsAbleToSearchTheSubCategoryIsNotPresent() throws IOException
@@ -31,7 +31,7 @@ public class SubCategoryTest extends BaseClass{
 			  .clickOnSearchOptionButton();
 	  boolean expectedResult = true;
 	  boolean actualResult = scp.checkOnResult();
-	  Assert.assertEquals(expectedResult, actualResult,Constants.SCP_verifySearchSubCategory);
+	  Assert.assertEquals(expectedResult, actualResult,Constants.SCP_verifyUserIsAbleToSearchTheSubCategoryIsNotPresent);
 	  
 	  
 	  
@@ -45,7 +45,7 @@ public class SubCategoryTest extends BaseClass{
 	  scp= hp.clickOnSubCategoryButton().clickOnResetButton();
 	  boolean expectedResult = true;
 	  boolean actualResult = scp.checkOnTableTitleIsDisplayed();
-	  Assert.assertEquals(expectedResult, actualResult,Constants.SCP_verifyResetSubCategory);
+	  Assert.assertEquals(expectedResult, actualResult,Constants.SCP_verifyUserIsAbleToResetTheSubCategory);
 	  
 }
 }

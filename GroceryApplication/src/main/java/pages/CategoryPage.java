@@ -6,11 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.FileUploadUtility;
 import utilities.GeneralUtility;
+import utilities.WaitUtilities;
 
 public class CategoryPage {
 	public WebDriver driver;
 	GeneralUtility gu=new GeneralUtility();
 	FileUploadUtility fu=new FileUploadUtility();
+	WaitUtilities wu=new WaitUtilities();
 	public CategoryPage(WebDriver driver)
 	
 	{
@@ -78,53 +80,58 @@ public class CategoryPage {
 		gu.scrollToElement(driver,radioButton1);
 	    gu.hoverOverElement(driver,radioButton1);
 		return this;
-		
 	}
+	
 	public CategoryPage clickOnRadioButton2()
 	{
 		gu.scrollToElement(driver,radioButton2);
 		gu.hoverOverElement(driver,radioButton2);
 		return this;
-		
-		
 	}
+	
 	public CategoryPage clickOnSaveButton()
 	{
+		wu.waitUntilElementIsVisible(driver,saveButton);
 		saveButton.click();
 		return this;
-		
 	}
+	
 	public boolean getAlertMessage()
 	{
 		return alertMessage.isDisplayed();
 	}
+	
 	public CategoryPage clickOnSearchButton()
 	{
 		searchButton.click();
 		return this;
 	}
+	
 	public CategoryPage enterOnSearchCategoryField()
 	{
 		searchCategoryField.sendKeys("Lotus");
 		return this;
 	}
+	
 	public CategoryPage clickOnSearchsubmitButton()
 	{
 		searchSubmitButton.click();
 		return this;
 	}
+	
 	public boolean checkOnResultMessage()
 	{
 		return resultNotFoundMessage.isDisplayed();
 	}
+	
 	public CategoryPage clickOnResetButton()
 	{
-		
 		resetButton.click();
 		return this;
 	}
-public boolean checkOnTableTitleIsDisplayed() {
-		
+	
+    public boolean checkOnTableTitleIsDisplayed() 
+    {
 		return tableTitle.isDisplayed();
 	}
 	

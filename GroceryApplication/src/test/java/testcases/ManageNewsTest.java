@@ -21,22 +21,22 @@ public class ManageNewsTest extends BaseClass {
 	  mnp=hp.clickOnManageNewsButton().clickOnNewManageNewsButton().enterManageNewsField().clickOnSaveButton();
 	  boolean actualResult = mnp.getAlertMessage();
 	  boolean expectedResult = true;
-	  Assert.assertEquals(expectedResult,actualResult,Constants.MNP_verifyAddManageNews);
+	  Assert.assertEquals(expectedResult,actualResult,Constants.MNP_verifyUserIsAbleTOAddNewNewsWithValidDetails);
   }
   @Test
-  public void verifyUserIsAbleToSearchTheNewsIsPresent() throws IOException
+  public void verifyUserIsAbleToSearchTheNewsThatIsNotPresent() throws IOException
   {
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
 	  mnp=hp.clickOnManageNewsButton().clickOnManageNewsSearchButton().enterSearchNewsTitleField().clickOnSearchButton();
-	  boolean actualResult = mnp.checkOnTableTitleIsDisplayed();
+	  boolean actualResult = mnp.checkOnResultMessage();
 	  boolean expectedResult = true;
-	  Assert.assertEquals(expectedResult,actualResult,Constants.MNP_verifySearchManageNews);
+	  Assert.assertEquals(expectedResult,actualResult,Constants.MNP_verifyUserIsAbleToSearchTheNewsThatIsNotPresent);
 	 
    }
   
   @Test
-  public void verifyUserIsAbleToResetTheManageNews() throws IOException
+  public void verifyUserIsAbleToResetTheNews() throws IOException
   {
 	  
 	  lp = new LoginPage(driver);
@@ -44,7 +44,7 @@ public class ManageNewsTest extends BaseClass {
 	  mnp=hp.clickOnManageNewsButton().clickOnResetButton();
 	  boolean actualResult = mnp.checkOnTableTitleIsDisplayed();
 	  boolean expectedResult = true;
-	  Assert.assertEquals(expectedResult,actualResult,Constants.MNP_verifyResetManageNews);
+	  Assert.assertEquals(expectedResult,actualResult,Constants.MNP_verifyUserIsAbleToResetTheNews);
   
   }
   
@@ -56,7 +56,7 @@ public class ManageNewsTest extends BaseClass {
 	  mnp=hp.clickOnManageNewsButton().clickOnEditButton().enterUpdateNewsfield().clickOnUpdateButton();
       boolean actualResult = mnp.getAlertMessage();
 	  boolean expectedResult = true;
-	  Assert.assertEquals(expectedResult,actualResult,Constants.MNP_verifyEditManageNews);
+	  Assert.assertEquals(expectedResult,actualResult,Constants.MNP_verifyUserIsAbleToEditTheNewsWithValidDetails);
   
   }
 
