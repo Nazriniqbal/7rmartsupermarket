@@ -8,13 +8,51 @@
   </listeners>
   <test thread-count="5" name="myTest(failed)">
     <classes>
+      <class name="testcases.CategoryTest">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="verifyUserIsAbleToResetTheCategory"/>
+          <include name="verifyUserIsAbleToSearchTheCategoryThatIsNotPresent"/>
+          <include name="verifyUserIsAbleToAddNewCategoryWithValidDetails"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- testcases.CategoryTest -->
+      <class name="testcases.SubCategoryTest">
+        <methods>
+          <include name="verifyUserIsAbleToResetTheSubCategory"/>
+          <include name="initializeBrowser"/>
+          <include name="verifyUserIsAbleToAddNewSubCategoryWithValidDetails"/>
+          <include name="verifyUserIsAbleToSearchTheSubCategoryIsNotPresent"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- testcases.SubCategoryTest -->
+      <class name="testcases.LoginTest">
+        <methods>
+          <include name="verifyUserLoginWithInvalidUsernameAndInvalidPassword"/>
+          <include name="initializeBrowser"/>
+          <include name="verifyUserLoginWithInvalidUsernameAndValidPassword"/>
+          <include name="driverQuit"/>
+          <include name="verifyUserLoginWithValidCredentials"/>
+          <include name="verifyUserLoginWithValidUsernameAndInvalidPassword"/>
+        </methods>
+      </class> <!-- testcases.LoginTest -->
       <class name="testcases.ManageNewsTest">
         <methods>
-          <include name="verifyUserIsAbleToSearchTheExistingNews"/>
+          <include name="verifyUserIsAbleToSearchTheNewsThatIsNotPresent"/>
+          <include name="verifyUserIsAbleToResetTheNews"/>
           <include name="initializeBrowser"/>
+          <include name="verifyUserIsAbleTOAddNewNewsWithValidDetails"/>
+          <include name="verifyUserIsAbleToEditTheNewsWithValidDetails"/>
           <include name="driverQuit"/>
         </methods>
       </class> <!-- testcases.ManageNewsTest -->
+      <class name="testcases.ManageContactTest">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="verifyUserIsAbleToUpdateTheContactWithValidDetails"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- testcases.ManageContactTest -->
     </classes>
   </test> <!-- myTest(failed) -->
 </suite> <!-- Failed suite [Mytestsuite] -->

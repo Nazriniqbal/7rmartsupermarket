@@ -10,7 +10,7 @@ public class Constants {
 	
 	public static final String lp_verifyLoginWithInvalidUsernameAndInvalidPassword="Login is possible with invaild username and invalid password";
 
-	public static final String CONFIGFILE=System.getProperty("user.dir")+"\\src\\main\\resources\\Config.properties";
+	public static final String CONFIGFILE=System.getProperty("user.dir")+"\\src\\test\\resources\\Config.properties";
 	
 	public static final String TESTDATAFILE=System.getProperty("user.dir")+"\\src\\main\\resources\\TestData\\GroceryAppdetails.xlsx";
 	
